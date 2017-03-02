@@ -1,0 +1,99 @@
+#map {
+    height: 100%;
+    display: inline-flex;
+    width: 80%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    display: inline-flex;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#controller {
+    width: 250px;
+    height: 140px;
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+
+#in-controller * {
+    height: 40px;
+    width: 90%;
+}
+
+#geo-location-box * {
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+#geo-location-box {
+    -webkit-animation-iteration-count: 1;
+    position: relative;
+}
+
+@-webkit-keyframes textmove {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+#loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 1s linear infinite;
+    visibility: hidden;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.button {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #3498db;
+    text-decoration: none;
+    border: none;
+    width: 90%;
+    margin: 20px 0 20px 0;
+    height: 40px;
+}
+
+.button:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}

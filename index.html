@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./weatherMap.css">
+</head>
+
+<body>
+    <div id="controller">
+        <div id="in-controller">
+            <input type="text" id="zip-code" value="Zipcode" onFocus="this.select()">
+            <input type="button" class="button" onclick="mapAdjust()" value="What's my weather?">
+        </div>
+        <input type="button" id="use-location" class="button" onclick="useLocation()" value="Use my location">
+        <div id="geo-location-box">
+            <div id="geo-location-text"></div>
+            <div id="loader" style="visibility: hidden;"></div>
+        </div>
+
+    </div>
+    <div id="map"></div>
+    <script type="text/javascript" src="weatherMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1sw7pPt505frzvgOGVl7uy-3BAQE2iDg&callback=initMap" async defer></script>
+</body>
+
+</html>
