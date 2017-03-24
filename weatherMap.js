@@ -28,7 +28,7 @@ function loadLatLong(zipcode) {
             loadStations(latitude, longitude);
         }
     }
-    xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",us&appid=fab32103c7aba1797a0bd0441979c55c", true);
+    xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",us&appid=fab32103c7aba1797a0bd0441979c55c", true);
     xmlhttp.send();
 
 }
@@ -43,7 +43,7 @@ function loadStations(latitude, longitude) {
             stationPoints(middleStation);
         }
     }
-    xmlhttp.open("GET", "https://api.openweathermap.org/data/2.5/box/city?bbox=" +
+    xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/box/city?bbox=" +
         (longitude - 2) + "," + (latitude - 1) + "," + (longitude + 5) + "," +
         (latitude + 1) + "," + 8 + "&cluster=yes&appid=fab32103c7aba1797a0bd0441979c55c", true);
     xmlhttp.send();
@@ -79,7 +79,7 @@ function stationPoints(middleStation) {
             position: new google.maps.LatLng(coordLat, coordLng),
             map: map,
             title: middleStation.list[i].name,
-            icon: 'https://openweathermap.org/img/w/' + middleStation.list[i].weather[0].icon + '.png'
+            icon: 'http://openweathermap.org/img/w/' + middleStation.list[i].weather[0].icon + '.png'
         });
 
         marker.addListener('click', function() {
